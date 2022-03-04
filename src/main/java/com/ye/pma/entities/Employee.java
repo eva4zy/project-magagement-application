@@ -12,10 +12,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+// Hibernate is an open source object relational mapping tool for Java. It provides a framework for mapping an object-oriented domain model to a traditional relational database
+// add @Entity annotation will 'create table....'
+
 @Entity
 public class Employee {
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="employee_seq")
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="employee_seq")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long employeeId;
 	private String firstName;
 	private String lastName;
